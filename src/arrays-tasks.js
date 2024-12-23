@@ -125,12 +125,9 @@ function getStringsLength(arr) {
  */
 function getAverage(arr) {
   const arrLength = arr.length;
-  if (!arrLength) {
-    return 0;
-  } else {
-    const average = arr.reduce((acc, val) => acc + val, 0) / arrLength;
-    return Number(average.toFixed(2));
-  }
+  if (!arrLength) return 0;
+  const average = arr.reduce((acc, val) => acc + val) / arrLength;
+  return Number(average.toFixed(2));
 }
 
 /**
