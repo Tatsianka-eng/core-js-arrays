@@ -128,7 +128,7 @@ function getAverage(arr) {
   if (!length) {
     return 0;
   } else {
-    const average = arr.reduce((acc, val) => acc + val) / length;
+    const average = arr.reduce((acc, val) => acc + val, 0) / length;
     return Number(average.toFixed(2));
   }
 }
