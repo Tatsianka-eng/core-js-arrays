@@ -73,7 +73,7 @@ function findElement(arr, value) {
  *    findAllOccurrences([ true, 0, 1, 'true' ], true) => 1
  */
 function findAllOccurrences(arr, item) {
-  const result = arr.filter((el) => el === i);
+  const result = arr.filter((el) => el === item);
   return result.length;
 }
 
