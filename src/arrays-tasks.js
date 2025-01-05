@@ -506,7 +506,9 @@ function findLongestIncreasingSubsequence(/* nums */) {
  */
 function propagateItemsByPositionIndex(arr) {
   return arr.map(
-    (item, index) => Array.from(index + 1).fill(item).flat()
+    (item, index) => Array.from(index + 1)
+    .fill(item)
+    .flat()
   );
 }
 
