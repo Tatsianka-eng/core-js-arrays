@@ -320,6 +320,7 @@ function calculateBalance(arr) {
   return flatArr.reduce((acc, item, index) => {
     if (!(index % 2)) acc += item;
     if (index % 2) acc -= item;
+    return acc;
   }, 0);
 }
 
