@@ -316,11 +316,13 @@ function selectMany(arr, childrenSelector) {
  *   calculateBalance([]) => 0
  */
 function calculateBalance(arr) {
+  if (!arr.length) return [];
   const flatArr = arr.flat();
   return flatArr.reduce((acc, item, index) => {
-    if (!(index % 2)) acc += item;
-    if (index % 2) acc -= item;
-    return acc;
+    let result = acc;
+    if (!(index % 2)) result += item;
+    if (index % 2) result -= item;
+    return result;
   }, 0);
 }
 
