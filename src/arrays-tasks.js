@@ -315,8 +315,12 @@ function selectMany(arr, childrenSelector) {
  *   calculateBalance([ [ 10, 8 ], [ 1, 5 ] ])  => (10 - 8) + (1 - 5) = 2 + -4 = -2
  *   calculateBalance([]) => 0
  */
-function calculateBalance(/* arr */) {
-  throw new Error('Not implemented');
+function calculateBalance(arr) {
+  const flatArr = arr.flat();
+  return flatArr.reduce((acc, item, index) => {
+    if (!(index % 2)) acc += item;
+    if (index % 2) acc -= item;
+  }, 0); 
 }
 
 /**
