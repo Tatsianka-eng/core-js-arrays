@@ -187,8 +187,7 @@ function insertItem(arr, item, index) {
  *    getHead([ 'a', 'b', 'c', 'd'], 0) => []
  */
 function getHead(arr, n) {
-  arr.splice(n);
-  return arr;
+  return arr.slice(0, n);
 }
 
 /**
